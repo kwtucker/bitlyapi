@@ -1,6 +1,8 @@
 # Bitly API
 
-## Major design decisions
+## Major Design Decisions
+
+I wanted to make the api versioned by adding a sub route of /v1 so it would help with future iterations. I did opt to pass the access token through an authorization header so there was no secret storage in the api. For the query parameters, I decided to follow suite with the real bitly api with “unit” and “units” to handle the time frame. Average parameter was also added to endpoint to allow the client to decide if they want the average or the default response of the total amount of clicks. I did not make the group value dynamic since the goal of this assessment was to get the average clicks of a user’s default group by countries (/api/v1/groups/default/countries). I kept “groups” and “countries” plural to prevent having to handle singular versus plural endpoints like (person/people, goose/geese).
 ___
 
 ## Getting Started
