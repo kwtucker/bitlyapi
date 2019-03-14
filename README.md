@@ -88,7 +88,7 @@ Get the average number of clicks, per country, within the last 30 days, for the 
 ```shell
 $ curl -i 'localhost:8080/api/v1/groups/default/countries?units=30&unit=day&average=true' -H "Authorization: Bearer {BITLY_ACCESS_TOKEN}"
 ```
-#### HTTPIE
+#### HTTPIE ([https://httpie.org/](https://httpie.org/))
 ```shell
 $ http localhost:8080/api/v1/groups/default/countries units==30 unit==day average==true Authorization:"Bearer {BITLY_ACCESS_TOKEN}"
 ```
