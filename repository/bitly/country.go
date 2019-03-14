@@ -11,6 +11,7 @@ import (
 	"github.com/kwtucker/bitlyapi/models"
 )
 
+// GetBitlinkCountryClickMetrics will request a single bitlink's country click metrics.
 func GetBitlinkCountryClickMetrics(url *url.URL, headers map[string]string) (*models.ClickMetrics, []byte, *http.Response, error) {
 
 	byt, response, err := api.SendGet(url.String(), headers)
@@ -31,6 +32,7 @@ func GetBitlinkCountryClickMetrics(url *url.URL, headers map[string]string) (*mo
 	return clickMetrics, byt, response, nil
 }
 
+// GetMetricsClickAveragePerCountry calculates the average of each countrys clicks.
 func GetMetricsClickAveragePerCountry(countryMetrics map[string][]int64) []models.Metric {
 	metricsAverage := []models.Metric{}
 

@@ -10,6 +10,7 @@ import (
 	"github.com/kwtucker/bitlyapi/models"
 )
 
+// GetGroup will request a single group and fill the group object passed in. It will call for all the pages and fill the links slice.
 func GetGroup(url *url.URL, headers map[string]string, group *models.Group) ([]byte, *http.Response, error) {
 
 	byt, response, err := api.SendGet(url.String(), headers)

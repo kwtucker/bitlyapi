@@ -11,6 +11,7 @@ import (
 	"github.com/kwtucker/bitlyapi/repository/bitly"
 )
 
+// HandleGroupsCountries will get the average or the total number of clicks, per country, within the last number of days, for the Bitlinks in a user's default group.
 func HandleGroupsCountries(w http.ResponseWriter, r *http.Request) {
 	params := map[string]string{}
 	accessToken := r.Header.Get("Authorization")

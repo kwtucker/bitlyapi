@@ -9,6 +9,7 @@ import (
 	"github.com/kwtucker/bitlyapi/models"
 )
 
+// GetUser will request a user based on the access token sent in on the headers.
 func GetUser(url string, headers map[string]string) (*models.User, []byte, *http.Response, error) {
 
 	byt, response, err := api.SendGet(url, headers)

@@ -22,6 +22,7 @@ func main() {
 	// Routes for the version one of the api.
 	v1.Router(api.PathPrefix("/v1").Subrouter())
 
+	// Will stop any request without a Authorization header.
 	api.Use(func(next http.Handler) http.Handler {
 		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 			if r.Header.Get("Authorization") == "" {
