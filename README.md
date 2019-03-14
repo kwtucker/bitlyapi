@@ -7,7 +7,7 @@ ___
 
 ## Getting Started
 
-**Go version**
+**Requirements**
 
 - go version go1.12
 
