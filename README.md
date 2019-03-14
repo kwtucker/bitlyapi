@@ -2,7 +2,7 @@
 
 ## Major Design Decisions
 
-I wanted to make the api versioned by adding a sub route of /v1 so it would help with future iterations. I did opt to pass the access token through an authorization header so there was no secret storage in the api. For the query parameters, I decided to follow adopt the “unit” and “units” parameters from the real bitly api  to handle the time frames. Average parameter was also added to endpoint to allow the client to decide if they want the average or the default response of the total amount of clicks. I did not make the group value dynamic since the goal of this assessment was to get the average clicks of a user’s default group by countries (/api/v1/groups/default/countries). I kept “groups” and “countries” plural to prevent having to handle singular versus plural endpoints like (person/people, goose/geese).
+I wanted to make the api versioned by adding a sub route of /v1 so it would help with future iterations. I did opt to pass the access token through an authorization header so there was no secret storage in the api. For the query parameters, I decided to adopt the “unit” and “units” parameters from the real bitly api  to handle the time frames. Average parameter was also added to endpoint to allow the client to decide if they want the average or the default response of the total amount of clicks. I did not make the group value dynamic since the goal of this assessment was to get the average clicks of a user’s default group by countries (/api/v1/groups/default/countries). I kept “groups” and “countries” plural to prevent having to handle singular versus plural endpoints like (person/people, goose/geese).
 ___
 
 ## Getting Started
@@ -62,7 +62,7 @@ ___
   - Enum:"minute" "hour" "day" "week" "month"
 - `units` [ Integer ]
   - Default: "0"
-  - An integer representing the time units to query data for. pass 0 to return all units of time.
+  - An integer representing the time units to query data for. Pass 0 to return all units of time.
 - `average` [ Boolean ]
   - Default: false
   - Average number of clicks, per country, for the Bitlinks in a user's default group.
