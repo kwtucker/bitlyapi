@@ -16,8 +16,7 @@ func SendGet(url string, headers map[string]string) ([]byte, *http.Response, err
 	var contentBuffer io.Reader
 	var err error
 
-	request, err = http.NewRequest(http.MethodGet, url, contentBuffer)
-	if err != nil {
+	if request, err = http.NewRequest(http.MethodGet, url, contentBuffer); err != nil {
 		errorMsg := fmt.Sprintf("Unable to create request: %v\n", err)
 		return nil, nil, errors.New(errorMsg)
 	}
@@ -27,8 +26,7 @@ func SendGet(url string, headers map[string]string) ([]byte, *http.Response, err
 		request.Header.Add(key, val)
 	}
 
-	response, err = httpClient.Do(request)
-	if err != nil {
+	if response, err = httpClient.Do(request); err != nil {
 		errorMsg := fmt.Sprintf("Unable to send request: %v\n", err)
 		return nil, nil, errors.New(errorMsg)
 	}
