@@ -4,7 +4,6 @@ const (
 	BitlyAPIV4 = "https://api-ssl.bitly.com/v4/"
 )
 
-// user
 type User struct {
 	Created          string  `json:"created"`
 	Modified         string  `json:"modified"`
@@ -23,7 +22,6 @@ type Email struct {
 	IsVerified bool   `json:"is_verified"`
 }
 
-/// group
 type Group struct {
 	Pagination Pagination `json:"pagination"`
 	Links      []Link     `json:"links"`
@@ -69,7 +67,6 @@ type Pagination struct {
 	Next  string `json:"next"`
 }
 
-// country
 type ClickMetrics struct {
 	Units         int64    `json:"units"`
 	Facet         string   `json:"facet"`
