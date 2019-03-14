@@ -16,15 +16,15 @@ ___
 Move this project into your go path under `$GOPATH/src/github.com/kwtucker`
 
 ```shell
- $ mv -r./bitlyapi $GOPATH/src/github.com/kwtucker/bitlyapi
- $ mkdir -p $GOPATH/src/github.com/kwtucker && mv ./bitlyapi $GOPATH/src/github.com/kwtucker/bitlyapi
+ $ mkdir -p $GOPATH/src/github.com/kwtucker
+ $ mv ./bitlyapi $GOPATH/src/github.com/kwtucker/bitlyapi
  $ cd $GOPATH/src/github.com/kwtucker/bitlyapi
 ```
 
 **Dependencies**
 
 ```shell
-$ go get ./...
+$ go get -t ./...
 ```
 
 **Test**
