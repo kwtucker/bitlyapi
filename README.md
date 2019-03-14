@@ -7,13 +7,11 @@ ___
 
 **Go version**
 
-```shell
-$ go version go1.12
-```
+- go version go1.12
 
 **Move Project**
 
-Move this project into your go path under `$GOPATH/src/github.com/kwtucker/bitlyapi`
+Move this project into your go path under `$GOPATH/src/github.com/kwtucker`
 
 ```shell
  $ mv -r./bitlyapi $GOPATH/src/github.com/kwtucker/bitlyapi
@@ -50,7 +48,7 @@ $ ./bitlyapi
 ___
 ## Documentation
 
-### Number Clicks for Bitlinks in a user default group.
+### Number of clicks for Bitlinks in a user default group.
 **[GET]**
 
 ```shell
