@@ -75,6 +75,11 @@ ___
 `
  /api/v1/groups/default/countries?units=30&unit=day&average=true
 `
+
+**Header**
+
+`Authorization:"Bearer {BITLY_ACCESS_TOKEN}"`
+
 #### Description
 Get the average number of clicks, per country, within the last 30 days, for the Bitlinks in a user's default group.
 #### Curl
