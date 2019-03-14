@@ -36,7 +36,7 @@ func GetGroup(url *url.URL, headers map[string]string, group *models.Group) ([]b
 		params := map[string]string{
 			"page": group.Pagination.Next,
 		}
-		parsedURL, err := api.AddURLQuerys(url.String(), params)
+		parsedURL, err := api.AddURLQueries(url.String(), params)
 		if err != nil {
 			return nil, nil, err
 		}

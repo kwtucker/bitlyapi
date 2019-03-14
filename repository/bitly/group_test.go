@@ -76,7 +76,7 @@ func TestGetGroup(t *testing.T) {
 	}
 
 	for _, tt := range tests {
-		parsedURL, _ := api.AddURLQuerys(tt.url, map[string]string{})
+		parsedURL, _ := api.AddURLQueries(tt.url, map[string]string{})
 		tt.args.url = parsedURL
 		t.Run(tt.name, func(t *testing.T) {
 			g := &models.Group{}

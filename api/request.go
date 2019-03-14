@@ -42,7 +42,7 @@ func SendGet(url string, headers map[string]string) ([]byte, *http.Response, err
 	return body, response, err
 }
 
-func AddURLQuerys(rawURL string, params map[string]string) (*url.URL, error) {
+func AddURLQueries(rawURL string, params map[string]string) (*url.URL, error) {
 	u, err := url.Parse(rawURL)
 	if err != nil {
 		return u, err

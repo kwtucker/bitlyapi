@@ -38,7 +38,7 @@ func HandleGroupsCountries(w http.ResponseWriter, r *http.Request) {
 	group := &models.Group{}
 
 	url := models.BitlyAPIV4 + "groups/" + user.DefaultGroupGUID + "/bitlinks"
-	parsedURL, err := api.AddURLQuerys(url, map[string]string{})
+	parsedURL, err := api.AddURLQueries(url, map[string]string{})
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
 		return
@@ -71,7 +71,7 @@ func HandleGroupsCountries(w http.ResponseWriter, r *http.Request) {
 	countryMetricsT := map[string]int64{}
 
 	for _, val := range group.Links {
-		parsedCountryURL, err := api.AddURLQuerys(models.BitlyAPIV4+"bitlinks/"+val.ID+"/countries", params)
+		parsedCountryURL, err := api.AddURLQueries(models.BitlyAPIV4+"bitlinks/"+val.ID+"/countries", params)
 		if err != nil {
 			w.WriteHeader(http.StatusInternalServerError)
 			return

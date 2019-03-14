@@ -46,15 +46,15 @@ func TestAddURLQuerys(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got, err := AddURLQuerys(tt.args.rawURL, tt.args.params)
+			got, err := AddURLQueries(tt.args.rawURL, tt.args.params)
 
 			if (err != nil) != tt.wantErr {
-				t.Errorf("AddURLQuerys() error = %v, wantErr %v", err, tt.wantErr)
+				t.Errorf("AddURLQueries() error = %v, wantErr %v", err, tt.wantErr)
 				return
 			}
 
 			if !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("AddURLQuerys() = %v, want %v", got, tt.want)
+				t.Errorf("AddURLQueries() = %v, want %v", got, tt.want)
 			}
 		})
 	}
