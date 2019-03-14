@@ -27,6 +27,9 @@ Setup this project in your go path under `$GOPATH/src/github.com/kwtucker`
 $ go get -t ./...
 ```
 
+- github.com/jarcoal/httpmock
+- github.com/gorilla/mux
+
 **Test**
 
 ```shell
