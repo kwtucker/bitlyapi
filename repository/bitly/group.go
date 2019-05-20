@@ -33,16 +33,16 @@ func GetGroup(url *url.URL, headers map[string]string, group *models.Group) ([]b
 		group.Links = append(group.Links, link)
 	}
 
-	if group.Pagination.Next != "" {
+	if newGroup.Pagination.Next != "" {
 		params := map[string]string{
-			"page": group.Pagination.Next,
+			"page": newGroup.Pagination.Next,
 		}
 		parsedURL, err := api.AddURLQueries(url.String(), params)
 		if err != nil {
 			return nil, nil, err
 		}
 
-		return GetGroup(parsedURL, headers, group)
+		return GetGroup(parsedURL, headers, newGroup)
 	}
 
 	return byt, response, nil
